@@ -3,7 +3,7 @@
 	<p>
 		<a href="https://github.com/iamd4rk/truthordare.py"><img src="https://i.imgur.com/IOdIA3y.png" width="600" alt="truthordare.py" /></a>
 	</p>
-	<br />
+	<br />	
 </div>
 
 # 📝 Info
@@ -30,7 +30,7 @@ python3 -m pip install truthordare.py
 
 # 🔃 Import
 
-```js
+```py
 import truthordare
 ```
 

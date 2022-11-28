@@ -1,11 +1,10 @@
 from setuptools import setup, find_packages
-import codecs
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 readme = ""
-with open("README.md") as f:
+with open("./doc/README.rst") as f:
     readme = f.read()
 
 VERSION = "0.0.2"
