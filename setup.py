@@ -7,9 +7,9 @@ readme = ""
 with open("./doc/README.rst") as f:
     readme = f.read()
 
-VERSION = "0.0.2"
+VERSION = "0.0.3"
 DESCRIPTION = "A Python Package that enables you to fetch data from Truth or Dare API"
-LONG_DESCRIPTION = readme
+LONG_DESCRIPTION = "Please visit https://github.com/iamd4rk/truthordare.py#readme for docs"
 
 setup(
     name="truthordare.py",
