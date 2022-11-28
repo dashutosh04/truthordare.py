@@ -1,10 +1,16 @@
 from setuptools import setup, find_packages
 import codecs
 
+with open("requirements.txt") as f:
+    requirements = f.read().splitlines()
 
-VERSION = "0.0.1"
+readme = ""
+with open("README.md") as f:
+    readme = f.read()
+
+VERSION = "0.0.2"
 DESCRIPTION = "A Python Package that enables you to fetch data from Truth or Dare API"
-LONG_DESCRIPTION = "This package allows you to get data from the truth or dare api with various parameters"
+LONG_DESCRIPTION = readme
 
 setup(
     name="truthordare.py",
@@ -15,14 +21,20 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=["requests>=2.28.1"],
+    install_requires=[requirements],
     keywords=["python", "truth", "dare", "truthordare"],
     classifiers=[
         "Development Status :: 1 - Planning",
+        "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Internet",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Utilities",
     ],
 )
