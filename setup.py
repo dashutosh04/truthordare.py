@@ -1,13 +1,18 @@
 from setuptools import setup, find_packages
+import codecs
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with codecs.open(os.path.join(here, "./docs/README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
+
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
-readme = ""
-with open("./doc/README.rst") as f:
-    readme = f.read()
 
-VERSION = "0.0.3"
+VERSION = "0.0.5"
 DESCRIPTION = "A Python Package that enables you to fetch data from Truth or Dare API"
 LONG_DESCRIPTION = "Please visit https://github.com/iamd4rk/truthordare.py#readme for docs"
 
@@ -18,7 +23,7 @@ setup(
     author_email="ashutoshdas2004@gmail.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
+    long_description=long_description,
     packages=find_packages(),
     install_requires=[requirements],
     keywords=["python", "truth", "dare", "truthordare"],
